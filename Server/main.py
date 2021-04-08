@@ -4,6 +4,8 @@ from utils import *
 from starlette.responses import FileResponse
 
 app = FastAPI()
+if not os.path.exists('./Archive'):
+    os.mkdir('./Archive')
 
 
 @app.post("/archive_upload/")
